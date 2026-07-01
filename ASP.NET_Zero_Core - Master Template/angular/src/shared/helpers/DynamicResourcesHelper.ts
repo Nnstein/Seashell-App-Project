@@ -52,7 +52,7 @@ export class DynamicResourcesHelper {
         DynamicResourcesHelper.setBodyAttributes();
 
         if (isRtl) {
-            styleUrls.push(AppConsts.appBaseUrl + '/assets/common/styles/abp-zero-template-rtl.min.css');
+            styleUrls.push(AppConsts.appBaseUrl + '/assets/common/styles/seashell-resort-rtl.min.css');
         }
 
         styleLoaderService.loadArray(styleUrls).then(function(){

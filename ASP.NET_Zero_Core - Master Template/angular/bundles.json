@@ -103,9 +103,9 @@
       ]
     },
     {
-      "output": "src/assets/common/styles/abp-zero-template-rtl.min.css",
+      "output": "src/assets/common/styles/seashell-resort-rtl.min.css",
       "input": [
-        "src/assets/common/styles/abp-zero-template-rtl.css"
+        "src/assets/common/styles/seashell-resort-rtl.css"
       ]
     },
     {

@@ -181,6 +181,7 @@
 
 | Date | Agent | What Was Done | What Changed |
 |---|---|---|---|
+| 2026-07-01 | Kimi Code CLI | Renamed remaining `MyCompanyName.AbpZeroTemplate` references to `Seashell.Resort`: Angular .csproj/.sln, Maui module/component files, npm/angular project names, and .gitignore paths. | No remaining `MyCompanyName.AbpZeroTemplate` refs in template source/config. Angular production build succeeds. |
 | 2026-07-01 | Kimi Code CLI | Fixed EF Core migration stale namespace references: removed `using Seashell.Resort.Chat;` and `using Seashell.Resort.Friendships;` from 11 orphaned `.Designer.cs` files. | `Seashell.Resort.EntityFrameworkCore` now compiles. `Seashell.Resort.Web.Host` compiles cleanly. Full `Seashell.Resort.Web.sln` still fails because `Web.Mvc/Areas/AppAreaName/Views/Layout/_ChatBar.cshtml` references the removed Chat namespace. |
 | 2026-07-01 | Antigravity | Task 0.7 complete: Created RoomType entity, Category enum, DbSet, DTOs, AppService, AutoMapper mappings, and seeded 13 room types. | Verified `Seashell.Resort.EntityFrameworkCore` compiles. |
 | 2026-06-30 | Orchestrator | Task 0.2 complete: Removed Chat/Friendship SignalR hub and all related features from backend. | Deleted 7 dirs + 5 files. Removed references from 14 source files. All non-migration code references eliminated. |

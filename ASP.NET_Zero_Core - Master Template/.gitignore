@@ -4,7 +4,7 @@
 .vs/
 .vscode/
 .idea/
-/aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Mvc/Properties/PublishProfiles/FolderProfile.pubxml
+/aspnet-core/src/Seashell.Resort.Web.Mvc/Properties/PublishProfiles/FolderProfile.pubxml
 aspnet-core/test/JMeter/AspNetZeroDotNetCoreSimpleTest.jmx
 /aspnet-core/build/outputs
 
@@ -15,14 +15,14 @@ aspnet-core/test/JMeter/AspNetZeroDotNetCoreSimpleTest.jmx
 aspnet-core/DeleteBinsAndObjs.bat
 
 *.pubxml
-aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Host/healthchecksdb
-aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Public/healthchecksdb
-aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Mvc/healthchecksdb
+aspnet-core/src/Seashell.Resort.Web.Host/healthchecksdb
+aspnet-core/src/Seashell.Resort.Web.Public/healthchecksdb
+aspnet-core/src/Seashell.Resort.Web.Mvc/healthchecksdb
 *.pfx
 
 # Ingore excel backup of audit logs
-aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Mvc/App_Data/AuditLogsBackups/*
-aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Host/App_Data/AuditLogsBackups/*
+aspnet-core/src/Seashell.Resort.Web.Mvc/App_Data/AuditLogsBackups/*
+aspnet-core/src/Seashell.Resort.Web.Host/App_Data/AuditLogsBackups/*
 
 # Ignore Playwright screenshots
 ui-tests-playwright/**/*.png
