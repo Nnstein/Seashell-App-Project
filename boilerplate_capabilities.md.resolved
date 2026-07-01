@@ -1,0 +1,248 @@
+# ASP.NET Zero Core — Full Capability Map
+
+> Version: May 2025 · .NET 9 · Angular 19 · MAUI (Blazor Hybrid)
+
+---
+
+## 🗂️ Solution Structure
+
+| Solution File | What it includes |
+|---|---|
+| [All.sln](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/MyCompanyName.AbpZeroTemplate.All.sln) | Everything: Web, Mobile, Tests |
+| [Web.sln](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/MyCompanyName.AbpZeroTemplate.Web.sln) | Web Host + Angular backend only |
+| [Mobile.sln](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/MyCompanyName.AbpZeroTemplate.Mobile.sln) | MAUI mobile app only |
+
+---
+
+## 🔧 Backend: ASP.NET Core Projects
+
+### Layer Overview (Clean Architecture / DDD)
+
+```
+Core.Shared          ← Shared constants, enums (used by all)
+Core                 ← Domain: Entities, Domain Services, Identity
+Application.Shared   ← DTOs & Interfaces (shared between backend & client)
+Application.Client   ← NETStandard 2.0 client for API consumption (used by MAUI)
+Application          ← App Services: business logic
+EntityFrameworkCore  ← EF Core DbContext, Repositories, Migrations
+Web.Core             ← Shared web code (Auth config, filters, base controllers)
+Web.Host             ← Main API (runs on port 44301)
+Web.Public           ← Public-facing MVC website (landing page)
+Migrator             ← Standalone CLI tool to run DB migrations
+GraphQL              ← GraphQL schema and resolvers
+Maui                 ← Mobile Blazor Hybrid app
+```
+
+---
+
+## 🌐 Web Backend Features (Web.Host)
+
+### Authentication & Identity
+- **JWT Bearer** authentication (enabled by default)
+- **OpenIddict** OAuth 2.0 / OIDC server (optional, toggle via config)
+- **Passwordless Login** with rate limiting
+- **Social Login**: Facebook, Google, Twitter, Microsoft, WsFederation, OpenId (all configurable per-tenant)
+- **Two-Factor Authentication** (built-in via ASP.NET Identity)
+- **LDAP / Active Directory** login (`Abp.Zero.Ldap`)
+- **Azure AD / MSAL** integration (via `@azure/msal-browser` on frontend)
+
+### Multi-Tenancy
+- Full **subdomain-based** multi-tenancy (`tenant1.yourdomain.com`)
+- Per-tenant: settings, features, editions, social login config
+- Tenant isolation at the data level (via ABP's `IMustHaveTenant` / `IMayHaveTenant`)
+- `DomainTenantCheckMiddleware` prevents non-existent subdomains
+
+### Subscription & Editions (SaaS)
+- **Edition management**: define tiers (Free, Pro, Enterprise, etc.)
+- **Feature flags per edition**: gate features by subscription level
+- **Subscription management**: trial periods, upgrades, renewals
+- Payment integration for subscriptions (tied to Stripe/PayPal)
+
+### Payments
+- **Stripe**: card payments, webhook support
+- **PayPal**: sandbox + production environments
+- Both configurable per-tenant and connected to edition subscriptions
+
+### Real-time
+- **SignalR** hubs:
+  - `/signalr` — General notifications, audit events
+  - `/signalr-chat` — Real-time user chat
+
+### Background Jobs
+- **Hangfire** with SQL Server storage
+- Dashboard protected by permissions (`Pages.Administration.HangfireDashboard`)
+
+### APIs
+- **REST API** auto-generated from Application Services
+- **Swagger / OpenAPI** UI at `/swagger`
+- **GraphQL** endpoint + Playground at `/ui/playground`
+- **NSwag** to auto-generate typed Angular API clients
+
+### Security & Infrastructure
+- **reCAPTCHA v3** (login, register)
+- **CORS** configurable per-origins list
+- **Health Checks** UI at `/healthchecks-ui`
+- **HTTPS / Kestrel** with certificate config
+- **HTML Sanitizer** on all controller inputs
+- **Log4Net** logging (separate configs for dev and prod)
+- **Azure Key Vault** for secrets (optional)
+
+### Notifications
+- User **notification system** (in-app)
+- **Mass notifications** to all users or tenants
+- **Email** via SMTP / MailKit
+- **SMS** via Twilio
+
+### Auditing & Entity History
+- Full **audit log** of every API call (user, params, duration, result)
+- **Entity change history** — track who changed what on any entity
+- GDPR: user data export / deletion requests
+
+### Organization Units
+- Hierarchical org tree
+- Assign users and roles to org units
+
+### Dynamic Entity Properties
+- Add custom properties to any entity at runtime without code changes
+
+### Dashboard Customization
+- Users can drag-and-drop dashboard widgets
+- Widget definitions stored per-user
+
+---
+
+## 🖥️ Angular Frontend (Port 4200)
+
+### Account Module (`/account`)
+| Page | Description |
+|---|---|
+| Login | Multi-tenant login with social auth buttons |
+| Register | Self-registration with email activation |
+| Forgot/Reset Password | Full flow |
+| Email Activation | Account verification |
+| Change Email | Authenticated email change |
+| Two-Factor Auth | OTP entry page |
+| Payment | Subscription payment pages |
+| Buy / Upgrade / Extend Succeed | Post-payment confirmation pages |
+
+### Admin Module (`/app/admin`)
+| Feature | Description |
+|---|---|
+| Dashboard | Customizable widget-based dashboard |
+| Users | CRUD, assign roles/org units, impersonate, lock, export |
+| Roles | CRUD, granular permission assignment |
+| Organization Units | Hierarchical org chart, user-to-unit assignment |
+| Tenants | Create/edit/delete tenants, subscription management |
+| Editions | Define SaaS tiers and assign features |
+| Subscription Management | Upgrade, extend, cancel plans |
+| Languages | Manage UI localization languages |
+| Audit Logs | Search and view full API audit trail |
+| Entity Changes | View change history on any entity |
+| Login Attempts | View failed/successful login history |
+| Mass Notifications | Send notifications to all users/tenants |
+| Webhook Subscriptions | Configure outbound webhooks |
+| Dynamic Properties | Add runtime properties to entities |
+| Settings | App-wide & tenant-level configuration UI |
+| UI Customization | Theme switcher, layout options |
+| Maintenance | Cache clearing, system info |
+| Demo UI Components | Live examples of all UI components |
+| Install | First-run installation wizard |
+
+### Main Module (`/app/main`)
+| Feature | Description |
+|---|---|
+| Dashboard | User-facing dashboard (separate from admin) |
+
+### Shared / Cross-cutting
+- **Real-time notifications** panel (bell icon, SignalR-powered)
+- **Chat** (user-to-user, SignalR-powered)
+- **Profile picture** with crop/upload
+- **Language switcher**
+- **Theme switcher** (multiple built-in themes)
+- **RTL support** (Arabic, Hebrew, etc.)
+- **Cookie consent** banner
+
+---
+
+## 📱 MAUI Mobile App (Blazor Hybrid)
+
+> Built with .NET MAUI + Blazor — runs on **Android, iOS, Windows, macOS**
+
+### Pages
+| Page | Description |
+|---|---|
+| Login | Auth via the same Web API (JWT) |
+| Users | User list and management |
+| Tenants | Tenant management |
+| My Settings | User profile settings |
+
+### Architecture
+- Uses `Application.Client` (NETStandard) to call the same REST API
+- `Flurl.Http` as the HTTP client
+- Shares DTOs and interfaces from `Application.Shared`
+- [MauiProgram.cs](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/src/MyCompanyName.AbpZeroTemplate.Maui/MauiProgram.cs) — entry point with DI setup
+- Blazor components rendered inside a native MAUI shell
+- Platform-specific code in `/Platforms` (Android, iOS, Windows, MacCatalyst)
+
+---
+
+## 🧪 Testing Projects
+
+| Project | Framework |
+|---|---|
+| `Test.Base` | xUnit, NSubstitute, Shouldly — base classes |
+| `Tests` | Application layer unit/integration tests |
+| `GraphQL.Tests` | GraphQL endpoint tests |
+| `ui-tests-playwright` | End-to-end browser tests (Playwright) |
+
+---
+
+## 🐳 DevOps / Deployment
+
+| Asset | Details |
+|---|---|
+| [docker-compose-mvc.dcproj](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/docker-compose-mvc.dcproj) | MVC web + SQL Server |
+| [docker-compose-public.dcproj](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/docker-compose-public.dcproj) | Public website |
+| [docker-compose-host.dcproj](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/docker-compose-host.dcproj) | API Host |
+| `docker/` folder | Dockerfiles for all projects |
+| `build/` folder | CI/CD build scripts |
+| `.github/` | GitHub Actions workflow definitions |
+
+---
+
+## 🔌 Key Configuration Files
+
+| File | Purpose |
+|---|---|
+| [Web.Host/appsettings.json](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/src/MyCompanyName.AbpZeroTemplate.Web.Host/appsettings.json) | DB connection string, auth, Stripe, PayPal, reCAPTCHA keys |
+| [Migrator/appsettings.json](file:///c:/Users/Nnstein%27s%20PC/Desktop/dot%20Net/ASP.NET_Zero_Core-05-2025/aspnet-core/src/MyCompanyName.AbpZeroTemplate.Migrator/appsettings.json) | Connection string for DB migration tool |
+| `angular/src/environments/` | Angular API base URL per environment |
+
+---
+
+## 💡 What to Keep vs. What to Cut
+
+### ✅ Always Keep (Core)
+- `Core`, `Application`, `EntityFrameworkCore`, `Web.Host`
+- Users, Roles, Permissions system
+- Multi-tenancy (even if single-tenant now)
+- Audit Logs (essential for production)
+
+### 🟡 Keep if Building SaaS
+- Editions, Features, Subscription management
+- Payment integrations (Stripe / PayPal)
+- Mass Notifications
+
+### 🔵 Optional / Feature-specific
+- Chat (SignalR) — keep if you need real-time messaging
+- GraphQL — keep if you have GraphQL consumers
+- LDAP — keep if enterprise/corporate users
+- Dynamic Entity Properties — rare, keep if you need runtime extensibility
+- Dashboard Customization — great UX feature, moderate complexity
+
+### 🔴 Can Be Removed if Not Needed
+- `Web.Public` — remove if you don't need a separate public site
+- MAUI — remove if web-only
+- OpenIddict — only needed if you're building a third-party OAuth server
+- Hangfire — can replace with simpler job scheduler if needed
+- Social logins — remove any providers you won't use

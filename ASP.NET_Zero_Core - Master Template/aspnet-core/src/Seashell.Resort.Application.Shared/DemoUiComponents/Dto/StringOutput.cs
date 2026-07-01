@@ -1,0 +1,7 @@
+﻿namespace Seashell.Resort.DemoUiComponents.Dto
+{
+    public class StringOutput
+    {
+        public string Output { get; set; }
+    }
+}

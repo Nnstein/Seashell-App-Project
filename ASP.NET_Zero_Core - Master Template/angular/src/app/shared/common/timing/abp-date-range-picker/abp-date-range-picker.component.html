@@ -1,0 +1,9 @@
+<input
+    type="text"
+    class="form-control"
+    #datePicker
+    bsDaterangepicker
+    [bsValue]="lastDates"
+    (bsValueChange)="setDate($event)"
+    [bsConfig]="bsConfig"
+/>

@@ -1,0 +1,11 @@
+@page "/"
+@using Seashell.Resort.Maui.Services.Navigation
+@inherits ResortMainLayoutPageComponentBase
+
+@code {
+    protected override void OnInitialized()
+    {
+        Resolve<INavigationService>().NavigateTo(NavigationUrlConsts.User);
+    }
+}
+

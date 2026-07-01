@@ -1,0 +1,675 @@
+{
+  "resort_name": "SeaShell Hotel & Resort",
+  "location": {
+    "address": "King Fahad Highway 30, Exit 245, Julai'a, Kuwait",
+    "po_box": "P.O.Box 488 Sabahiya, 54575 Kuwait",
+    "coordinates": "Al Qulay'ah, Al-Ahmadi Julai'a",
+    "nearby_landmarks": {
+      "Bnaider_Health_Center": "3.9 km",
+      "Mina_Ahmadi_Refinery": "24.3 km",
+      "Al_Kout_Mall": "26.6 km",
+      "British_Medical_Center": "27.7 km",
+      "Al_Kout_Medical_Centre": "28.3 km",
+      "360_Mall": "51.6 km",
+      "Marina_Mall": "55.6 km",
+      "Kuwait_Zoo": "56.3 km",
+      "Grand_Avenue": "57.9 km",
+      "Mirror_House": "58.5 km"
+    },
+    "nearest_airport": {
+      "name": "Kuwait International Airport (KWI)",
+      "distance": "50.3 km"
+    }
+  },
+  "contact": {
+    "phone": "+965 1844444",
+    "reservations_phone_1": "(+965) 2325 0004",
+    "reservations_phone_2": "(+965) 2325 0003",
+    "fax_1": "(+965) 2325 0052",
+    "fax_2": "2325 0040",
+    "email": "reservations@seashell-kuwait.com",
+    "social_media": {
+      "twitter": "@SeaShell_Kuwait",
+      "instagram": "@seashell.resort"
+    }
+  },
+  "awards": [
+    "Winner 2014 for World Luxury Hotel Award"
+  ],
+  "accommodations": {
+    "chalets": [
+      {
+        "name": "Two Bedroom Chalet (First Floor)",
+        "id": 23,
+        "category": "Chalet",
+        "description": "Ideal chalet in the heart of SeaShell with a view to relax and unwind. Features a cozy balcony.",
+        "specifications": {
+          "location": "First floor of the chalet complex, facing SeaShell's center and close to main swimming pool",
+          "size_sqm": 79,
+          "size_sqft": 850,
+          "bedrooms": 2,
+          "master_bedroom": 1,
+          "bathrooms": 1,
+          "common_bathrooms": 1,
+          "showers": 2,
+          "kitchen": "Equipped kitchenette",
+          "living_room": "Spacious",
+          "balcony": "Cozy balcony with 2 chairs and 1 table, partial pool view",
+          "max_occupancy": "4 adults and 2 children"
+        },
+        "amenities": [
+          "Telephone",
+          "2 TVs (81cm/32in & 107cm/42in)",
+          "Complimentary Wi-Fi",
+          "Hair-dryer (upon request)",
+          "Iron and ironing board (upon request)",
+          "Microwave (upon request)",
+          "Complimentary coffee/tea tray and 2 water bottles (upon request)",
+          "Complimentary parking (1 car)"
+        ],
+        "bathroom_features": [
+          "Toiletries and dental kits",
+          "2 waffle-weave cotton bathrobes",
+          "2 pairs of slippers",
+          "Shaving kit"
+        ],
+        "bedding_features": [
+          "King-sized or two single-sized beds (varies)",
+          "1 roll-over bed available (fee applies)",
+          "Baby cots available (1 complimentary, additional fee applies)",
+          "Blankets and plush pillows (upon request)"
+        ],
+        "hospitality_services": [
+          "Free access to pools and beach",
+          "24/7 Room service",
+          "Daily housekeeping",
+          "Laundry and dry cleaning (fee applies)",
+          "Club car rides (upon request)"
+        ]
+      },
+      {
+        "name": "Two Bedroom Chalet (Ground Floor)",
+        "id": 25,
+        "category": "Chalet",
+        "description": "Same as first floor chalet but features an outdoor terrace designed for barbeque gatherings.",
+        "specifications": {
+          "location": "Ground floor of the chalet complex, facing SeaShell's center and close to main swimming pool",
+          "size_sqm": 73.6,
+          "size_sqft": 792,
+          "bedrooms": 2,
+          "master_bedroom": 1,
+          "bathrooms": 1,
+          "common_bathrooms": 1,
+          "showers": 2,
+          "kitchen": "Equipped kitchenette",
+          "living_room": "Spacious",
+          "terrace": "Outdoor terrace with dining table, 4 chairs and umbrella; private terrace with 2 chairs, 1 table, partial pool view",
+          "max_occupancy": "4 adults and 2 children"
+        },
+        "amenities": [
+          "Telephone",
+          "2 TVs (81cm/32in & 107cm/42in)",
+          "Complimentary Wi-Fi",
+          "Hair-dryer (upon request)",
+          "Iron and ironing board (upon request)",
+          "Microwave (upon request)",
+          "Complimentary coffee/tea tray and 2 water bottles (upon request)",
+          "Complimentary parking (1 car)"
+        ],
+        "bathroom_features": [
+          "Toiletries and dental kits",
+          "2 waffle-weave cotton bathrobes",
+          "2 pairs of slippers",
+          "Shaving kit"
+        ],
+        "bedding_features": [
+          "King-sized or two single-sized beds (varies)",
+          "1 roll-over bed available (fee applies)",
+          "Baby cots available (1 complimentary, additional fee applies)",
+          "Blankets and plush pillows (upon request)"
+        ],
+        "hospitality_services": [
+          "Free access to pools and beach",
+          "24/7 Room service",
+          "Daily housekeeping",
+          "Laundry and dry cleaning (fee applies)",
+          "Club car rides (upon request)"
+        ]
+      },
+      {
+        "name": "Three Bedroom Chalet (No View)",
+        "category": "Chalet",
+        "description": "Features three bedrooms, three bathrooms, storage room, fully equipped kitchen, living room and private terrace.",
+        "specifications": {
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "storage_room": true,
+          "kitchen": "Fully equipped",
+          "living_room": true,
+          "terrace": "Private terrace"
+        }
+      },
+      {
+        "name": "Three Bedroom Chalet (Garden View)",
+        "category": "Chalet",
+        "description": "Two-level villa overlooking the main hotel garden. Features three bedrooms, three bathrooms, storage room. Overlooks garden and swimming pool.",
+        "specifications": {
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "storage_room": true,
+          "view": "Garden and swimming pool"
+        }
+      },
+      {
+        "name": "Four Bedroom Chalet (Panoramic View)",
+        "category": "Chalet",
+        "description": "Located in the center of the resort, overlooking the main swimming pool and garden. Master bedroom on upper level with seaside view.",
+        "specifications": {
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "storage_room": true,
+          "kitchen": "Fully equipped",
+          "view": "Main swimming pool, garden, seaside (master bedroom)"
+        }
+      },
+      {
+        "name": "Beach Front Four Bedroom Chalet",
+        "category": "Chalet",
+        "description": "Faces the sea with wonderful view. Four bedrooms, four bathrooms, storage room with equipped kitchen and living room for family gatherings.",
+        "specifications": {
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "storage_room": true,
+          "kitchen": "Equipped",
+          "living_room": true,
+          "view": "Sea front"
+        }
+      },
+      {
+        "name": "Beach Patio Four Bedroom Chalet",
+        "category": "Chalet",
+        "description": "Beach view chalet with unique patio. Terrace designed for dinner parties and family gatherings.",
+        "specifications": {
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "view": "Beach",
+          "terrace": "Patio for gatherings"
+        }
+      },
+      {
+        "name": "Private Pool Four Bedroom Chalet",
+        "category": "Chalet",
+        "description": "Exclusive private pool chalet for family gatherings. Beach view with outdoor dining.",
+        "specifications": {
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "guest_room": true,
+          "kitchen": "Equipped",
+          "private_pool": true,
+          "view": "Beach"
+        }
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Standard Room (King Bed)",
+        "id": 30,
+        "category": "Room",
+        "description": "Simple room above the reception with view of main courtyard, café Presto, and fountain.",
+        "specifications": {
+          "location": "Second floor, right above the reception",
+          "size_sqm": 36,
+          "size_sqft": 387.5,
+          "size_note": "Sizes may vary between rooms",
+          "max_occupancy": "2 adults and 1 child"
+        },
+        "amenities": [
+          "Telephone",
+          "TV (81cm/32in)",
+          "Complimentary Wi-Fi",
+          "In-room safe box",
+          "In-room refrigerated mini-bar",
+          "Hair-dryer",
+          "Iron and ironing board (upon request)",
+          "Complimentary coffee/tea tray and 2 water bottles (replenished daily)"
+        ],
+        "bathroom_features": [
+          "Toiletries and dental kits",
+          "2 waffle-weave cotton bathrobes",
+          "2 pairs of slippers",
+          "Shaving kit (upon request)"
+        ],
+        "bedding_features": [
+          "King or twin beds (depending on preference)",
+          "Baby cots available (1 complimentary, additional fee applies)",
+          "Blankets and plush pillows (upon request)"
+        ],
+        "hospitality_services": [
+          "Free access to pools and beach",
+          "24/7 Room service",
+          "Daily housekeeping",
+          "Laundry and dry cleaning (fee applies)",
+          "Club car rides (upon request)"
+        ]
+      },
+      {
+        "name": "Studio (First Floor)",
+        "category": "Room",
+        "description": "Spacious studio for small families with view of resort's garden and Avenue's swimming pool.",
+        "specifications": {
+          "floor": "First floor",
+          "view": "Resort garden and Avenue's swimming pool"
+        }
+      },
+      {
+        "name": "Studio (Ground Floor)",
+        "category": "Room",
+        "description": "Spacious studio for small families with view of resort's garden and Avenue's swimming pool.",
+        "specifications": {
+          "floor": "Ground floor",
+          "view": "Resort garden and Avenue's swimming pool"
+        }
+      },
+      {
+        "name": "Junior Suite (First Floor)",
+        "id": 27,
+        "category": "Room",
+        "description": "Spacious suite for small families with view of resort's garden and Avenue's swimming pool.",
+        "specifications": {
+          "location": "First floor of the chalet complex, facing Avenue's swimming pool view",
+          "size_sqm": 47.74,
+          "size_sqft": 514,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "kitchen": "Equipped kitchenette",
+          "living_dining": "Proportioned living and dining areas",
+          "balcony": "Private balcony",
+          "max_occupancy": "2 adults and 1 child"
+        },
+        "amenities": [
+          "Telephone",
+          "2 TVs (127cm/50in)",
+          "Complimentary Wi-Fi",
+          "Hair-dryer",
+          "Iron and ironing board (upon request)",
+          "In-room refrigerated mini-bar",
+          "Complimentary coffee/tea tray and 2 water bottles (replenished daily)"
+        ],
+        "bathroom_features": [
+          "Toiletries and dental kits",
+          "2 waffle-weave cotton bathrobes",
+          "2 pairs of slippers",
+          "Shaving kit"
+        ],
+        "bedding_features": [
+          "King bed",
+          "1 roll-over bed available (fee applies)",
+          "Baby cots available (1 complimentary, additional fee applies)",
+          "Blankets and plush pillows (upon request)"
+        ],
+        "hospitality_services": [
+          "Free access to pools and beach",
+          "24/7 Room service",
+          "Daily housekeeping",
+          "Laundry and dry cleaning (fee applies)",
+          "Club car rides (upon request)"
+        ]
+      },
+      {
+        "name": "Junior Suite (Ground Floor)",
+        "category": "Room",
+        "description": "Spacious suite for small families with view of resort's garden and Avenue's swimming pool.",
+        "specifications": {
+          "floor": "Ground floor",
+          "view": "Resort garden and Avenue's swimming pool"
+        }
+      },
+      {
+        "name": "Superior Room",
+        "category": "Room",
+        "description": "Designed for comfort and relaxation with exclusive jacuzzi.",
+        "specifications": {
+          "jacuzzi": true
+        }
+      },
+      {
+        "name": "Presidential Suite",
+        "id": 29,
+        "category": "Room",
+        "description": "Spacious living room with king-sized bed, jacuzzi and shower overlooking main courtyard. Interconnected rooms available.",
+        "specifications": {
+          "location": "Second floor, above the reception",
+          "size_sqm": 73,
+          "size_sqft": 786,
+          "bedrooms": 1,
+          "interconnecting_bedrooms": "Up to 3 total",
+          "bathrooms": 1,
+          "interconnecting_bathrooms": "Up to 3 total",
+          "jacuzzi": true,
+          "terrace": "80 sqm terrace with wide view of the playground"
+        },
+        "amenities": [
+          "Telephone",
+          "2 TVs (107cm/42in in living room, 81cm/32in in bedroom)",
+          "Complimentary Wi-Fi",
+          "Complimentary coffee/tea tray and 2 water bottles (replenished daily)",
+          "In-room refrigerated mini-bar",
+          "In-room safe box",
+          "Home theater stereos",
+          "Alarm",
+          "Hair-dryer",
+          "Iron and ironing board (upon request)"
+        ],
+        "bathroom_features": [
+          "Toiletries and dental kits",
+          "2 waffle-weave cotton bathrobes",
+          "2 pairs of slippers",
+          "Shaving kit"
+        ],
+        "bedding_features": [
+          "1 king-sized bed (master bedroom)",
+          "1 roll-over bed available (fee applies)",
+          "Baby cots available (1 complimentary, additional fee applies)",
+          "Blankets and plush pillows (upon request)"
+        ],
+        "hospitality_services": [
+          "Free access to pools and beach",
+          "24/7 Room service",
+          "Daily housekeeping",
+          "Laundry and dry cleaning (fee applies)",
+          "Club car rides (upon request)"
+        ]
+      }
+    ]
+  },
+  "dining": {
+    "restaurants_and_cafes": [
+      {
+        "name": "Avenue",
+        "id": 2,
+        "type": "Restaurant",
+        "description": "Located in the basement of the reception, overlooking the swimming pool with indoor and outdoor terrace for panoramic views. Serves a la carte dishes with both oriental and occidental cuisines. Suitable for groups, events and celebrations.",
+        "location_tag": "Basement of reception, overlooking swimming pool",
+        "cuisines": [
+          "Oriental",
+          "Occidental/Western",
+          "A la carte"
+        ],
+        "features": [
+          "Indoor seating",
+          "Outdoor terrace",
+          "Panoramic view",
+          "Group bookings",
+          "Event hosting"
+        ],
+        "meal_type": "A la carte"
+      },
+      {
+        "name": "Café Presto",
+        "id": 1,
+        "type": "Cafe",
+        "description": "Located at the resort entrance porch, welcoming guests with fresh coffee and croissants. Warm and inviting atmosphere for friends and families. Modern design with rich menu including Italian Pizza prepared fresh in front of guests. Popular hangout for young adults and professionals.",
+        "location_tag": "Porch at resort entrance, near the fountain",
+        "cuisines": [
+          "Italian",
+          "Coffee & Pastries",
+          "Cocktails",
+          "Snacks"
+        ],
+        "features": [
+          "Fresh coffee",
+          "Croissants",
+          "Italian Pizza (live preparation)",
+          "Fruit cocktails",
+          "Informal gathering space",
+          "Modern design"
+        ],
+        "meal_type": "Casual dining, Snacks, Coffee"
+      },
+      {
+        "name": "Gazebo",
+        "id": 3,
+        "type": "Pool Bar / Restaurant",
+        "description": "Pool bar near the main swimming pool serving food and cool drinks.",
+        "location_tag": "Near main swimming pool",
+        "cuisines": [
+          "Bar food",
+          "Beverages",
+          "Light meals"
+        ],
+        "features": [
+          "Poolside dining",
+          "Cool drinks",
+          "Casual food"
+        ],
+        "meal_type": "Light meals, Drinks"
+      },
+      {
+        "name": "SeaShell Restaurant",
+        "id": 4,
+        "type": "Restaurant",
+        "description": "Main resort restaurant. (Detailed description not available on website)",
+        "location_tag": "On-site",
+        "cuisines": [
+          "Local",
+          "International"
+        ],
+        "features": [
+          "Breakfast buffet (Western and Arabian combined - per TripAdvisor)"
+        ],
+        "meal_type": "Buffet, A la carte"
+      }
+    ],
+    "additional_dining_services": [
+      "24-hour Room Service",
+      "Family picnics and lunches on the beachside (arranged upon request)",
+      "Private dining on chalet terrace",
+      "Breakfast buffet (Western and Arabian combined)"
+    ]
+  },
+  "facilities_and_services": {
+    "pools_and_beach": [
+      {
+        "name": "Main Swimming Pool",
+        "type": "Swimming Pool",
+        "description": "Large resort swimming pool",
+        "features": [
+          "Avenue restaurant overlooks pool",
+          "Gazebo pool bar nearby"
+        ]
+      },
+      {
+        "name": "Avenue Swimming Pool",
+        "type": "Swimming Pool",
+        "description": "Swimming pool near Avenue restaurant",
+        "features": [
+          "Viewed from Studios and Junior Suites"
+        ]
+      },
+      {
+        "name": "Private Outdoor Ladies' Pool",
+        "type": "Private Pool",
+        "description": "Dedicated private outdoor swimming pool for ladies"
+      },
+      {
+        "name": "Private Pool (in Private Pool Four Bedroom Chalet)",
+        "type": "Private Pool",
+        "description": "Exclusive pool in the Private Pool Four Bedroom Chalet"
+      },
+      {
+        "name": "Beach Access",
+        "type": "Beach",
+        "description": "White sandy beach of Julai'a with seafront access",
+        "features": [
+          "Sea & Sand area",
+          "Beachfront chalets",
+          "Water sports available"
+        ]
+      }
+    ],
+    "sports_and_recreation": [
+      {
+        "name": "Water Sports",
+        "type": "Activity",
+        "description": "Jet-ski and other water activities on the Gulf",
+        "features": [
+          "Jet-ski rentals"
+        ]
+      },
+      {
+        "name": "Health & Fitness Club",
+        "type": "Fitness",
+        "description": "On-site fitness center"
+      },
+      {
+        "name": "Sea & Sand",
+        "type": "Beach Area",
+        "description": "Beachfront recreational area"
+      }
+    ],
+    "children_facilities": [
+      {
+        "name": "Children's Playground Area",
+        "type": "Playground",
+        "description": "Outdoor playground for children"
+      },
+      {
+        "name": "Kids' Club",
+        "type": "Kids Entertainment",
+        "description": "Entertainment club for children"
+      },
+      {
+        "name": "Kids' Cinema",
+        "type": "Entertainment",
+        "description": "Cinema for kids"
+      },
+      {
+        "name": "Entertainment Center",
+        "type": "Entertainment",
+        "description": "General entertainment facility"
+      }
+    ],
+    "business_facilities": [
+      {
+        "name": "Conference Room",
+        "type": "Business",
+        "description": "Two multi-function meeting/conference rooms available for workshops, management seminars, and training sessions. Customizable setup with assistance in organizing events.",
+        "amenities": [
+          "LCD Projector",
+          "LCD Screen",
+          "Multi-media projector",
+          "Slide projector",
+          "Overhead projector",
+          "Television",
+          "Laser pointer",
+          "Flipchart board"
+        ]
+      },
+      {
+        "name": "Business Center",
+        "type": "Business",
+        "description": "Business center for guest use"
+      }
+    ],
+    "other_services": [
+      "24-hour Front Desk",
+      "24-hour Room Service",
+      "Daily Housekeeping",
+      "Laundry and Dry Cleaning (fee applies)",
+      "Club Car Rides (upon request)",
+      "Complimentary Wi-Fi",
+      "Complimentary Parking",
+      "In-room Safe Box",
+      "Baby Sitting Services (cots available)"
+    ]
+  },
+  "local_area_attractions": {
+    "description": "SeaShell Hotel & Resort is located on the Gulf's coastline in Julai'a, about an hour's drive from downtown Kuwait City. The resort embodies a Mediterranean atmosphere with seafront swimming pools and floral landscapes.",
+    "nearby_attractions": [
+      {
+        "name": "Bnaider Beach Area",
+        "description": "Popular beach destination area in southern Kuwait",
+        "distance": "Nearby"
+      },
+      {
+        "name": "Mina Ahmadi Refinery",
+        "description": "Industrial landmark",
+        "distance": "24.3 km"
+      },
+      {
+        "name": "Al Kout Mall",
+        "description": "Major shopping center",
+        "distance": "26.6 km"
+      },
+      {
+        "name": "360 Mall",
+        "description": "Major shopping and entertainment destination",
+        "distance": "51.6 km"
+      },
+      {
+        "name": "Marina Mall",
+        "description": "Shopping mall in Kuwait City",
+        "distance": "55.6 km"
+      },
+      {
+        "name": "Kuwait Zoo",
+        "description": "Zoo in Kuwait City",
+        "distance": "56.3 km"
+      },
+      {
+        "name": "Grand Avenue (The Avenues Mall)",
+        "description": "Largest shopping mall in Kuwait",
+        "distance": "57.9 km"
+      },
+      {
+        "name": "Mirror House",
+        "description": "Unique art house attraction",
+        "distance": "58.5 km"
+      },
+      {
+        "name": "Kuwait City Center",
+        "description": "Downtown Kuwait",
+        "distance": "~1 hour drive"
+      }
+    ]
+  },
+  "policies_and_information": {
+    "check_in_out": {
+      "note": "Specific check-in and check-out times are not listed on the website. Contact the resort directly for this information."
+    },
+    "pet_policy": {
+      "note": "Not specified on website. Contact resort for details."
+    },
+    "children_policy": {
+      "baby_cots": "1 baby cot complimentary per room; additional cots subject to fee",
+      "kids_facilities": "Children's playground, Kids' Club, Kids' Cinema available",
+      "family_friendly": true
+    },
+    "payment": {
+      "day_pass_fee": "10 KD for facility day use (5 KD usable at restaurant, per TripAdvisor review)",
+      "note": "Payment methods not specified. Contact resort for details."
+    },
+    "parking": "Complimentary parking available (1 car per chalet)",
+    "wi_fi": "Complimentary Wi-Fi access throughout the resort",
+    "room_service": "24/7 Room service available",
+    "housekeeping": "Daily housekeeping included",
+    "laundry": "Laundry and dry cleaning services available (subject to fee)",
+    "smoking_policy": "Not specified on website",
+    "former_name": "Formerly Kempinski Julai'a Hotel and Resort (per TripAdvisor)",
+    "rating": {
+      "self_rated": "5-star",
+      "agoda_rating": "6.5/10 (71 reviews)",
+      "google_rating": "4.0/5 (1,168 reviews)",
+      "tripadvisor": "Mixed reviews - praised for breakfast buffet and grounds"
+    }
+  },
+  "website_metadata": {
+    "official_website": "https://www.seashell-kuwait.com",
+    "copyright": "2026 - 2027 SeaShell Hotel & Resort. All Rights Reserved.",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "note": "The website does not display specific check-in/check-out times, spa treatment details, or detailed operating hours for dining venues. Contact resort directly for this information."
+  }
+}

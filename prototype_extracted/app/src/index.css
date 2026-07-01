@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-cyan: #89C1D8;
+    --brand-cyan-light: #A8D4E6;
+    --brand-cyan-dark: #6BA8C4;
+    --brand-pink: #FDEAE9;
+    --brand-pink-light: #FFF5F4;
+    --brand-salmon: #e97a74;
+    --brand-salmon-muted: #e7aba8;
+
+    --background: 0 0% 100%;
+    --foreground: 60 1% 33%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 1% 33%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 1% 33%;
+    --primary: 197 45% 69%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 5 93% 95%;
+    --secondary-foreground: 60 1% 33%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 48%;
+    --accent: 5 93% 95%;
+    --accent-foreground: 60 1% 33%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 197 45% 69%;
+    --radius: 0.75rem;
+
+    --app-bg: #F8F7F4;
+    --surface: #FFFFFF;
+    --surface-elevated: #FFFFFF;
+    --text-primary: #2D2D2D;
+    --text-secondary: #6B6B6B;
+    --text-muted: #9E9E9E;
+    --tile-kitchen: #4ADE80;
+    --tile-kitchen-bg: #DCFCE7;
+    --tile-services: #FDE68A;
+    --tile-services-bg: #FEF3C7;
+    --tile-rooms: #7DD3FC;
+    --tile-rooms-bg: #E0F2FE;
+    --nav-bg: #FFFFFF;
+    --nav-border: #E5E5E5;
+    --fab-bg: #4ADE80;
+    --fab-color: #FFFFFF;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --shadow-fab: 0 6px 20px rgba(74, 222, 128, 0.4);
+    --skeleton-base: #E8E8E6;
+    --skeleton-highlight: #F2F2F0;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 197 45% 69%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 197 45% 69%;
+
+    --app-bg: #0F0F11;
+    --surface: #1A1A1E;
+    --surface-elevated: #222228;
+    --text-primary: #F0F0F0;
+    --text-secondary: #A0A0A8;
+    --text-muted: #6B6B74;
+    --tile-kitchen: #4ADE80;
+    --tile-kitchen-bg: rgba(74, 222, 128, 0.15);
+    --tile-services: #FDE68A;
+    --tile-services-bg: rgba(253, 230, 138, 0.15);
+    --tile-rooms: #7DD3FC;
+    --tile-rooms-bg: rgba(125, 211, 252, 0.15);
+    --nav-bg: #1A1A1E;
+    --nav-border: #2A2A32;
+    --fab-bg: #4ADE80;
+    --fab-color: #0F0F11;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+    --shadow-fab: 0 6px 20px rgba(74, 222, 128, 0.3);
+    --skeleton-base: #27272A;
+    --skeleton-highlight: #3F3F46;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: var(--app-bg);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: none;
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .bento-tile {
+    @apply relative overflow-hidden transition-all duration-300;
+    border-radius: 20px;
+  }
+  .bento-tile:active {
+    transform: scale(0.97);
+  }
+
+  .event-card {
+    @apply relative overflow-hidden flex-shrink-0;
+    border-radius: 20px;
+    width: 280px;
+    height: 340px;
+  }
+
+  .filter-pill {
+    @apply px-4 py-2 text-sm font-semibold transition-all duration-200 whitespace-nowrap;
+    border-radius: 100px;
+  }
+  .filter-pill.active {
+    background: var(--fab-bg);
+    color: var(--fab-color);
+  }
+  .filter-pill:not(.active) {
+    background: var(--surface-elevated);
+    color: var(--text-secondary);
+    border: 1px solid var(--nav-border);
+  }
+
+  .nav-item {
+    @apply flex flex-col items-center justify-center gap-1 transition-colors duration-200;
+  }
+  .nav-item.active {
+    color: var(--brand-cyan);
+  }
+  .nav-item:not(.active) {
+    color: var(--text-muted);
+  }
+
+  /* ============ SKELETON LOADING SYSTEM ============ */
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--skeleton-base);
+    border-radius: 0.5rem;
+  }
+  .skeleton-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    animation: shimmer 1.6s ease-in-out infinite;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--skeleton-highlight) 50%,
+      transparent 100%
+    );
+  }
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .skeleton-glass {
+    background-color: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .skeleton-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    animation: shimmer 1.6s ease-in-out infinite;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,255,255,0.12) 50%,
+      transparent 100%
+    );
+  }
+  .dark .skeleton-glass {
+    background-color: rgba(255,255,255,0.05);
+  }
+  .dark .skeleton-glass::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,255,255,0.06) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Dark mode skeleton adjustments */
+  .dark .skeleton-shimmer {
+    background-color: var(--skeleton-base);
+  }
+  .dark .skeleton-shimmer::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--skeleton-highlight) 50%,
+      transparent 100%
+    );
+  }
+}
+
+/* Mobile viewport fix */
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Admin dark shimmer animation */
+@keyframes shimmer-dark {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer-dark 1.6s ease-in-out infinite;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--brand-cyan);
+  color: white;
+}
